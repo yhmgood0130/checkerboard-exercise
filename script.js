@@ -21,7 +21,7 @@ for (var i = 0; i < 99; i++) {
 
   //Random Colors
   box.style.backgroundColor = "#" + Math.floor(Math.random()*999999);
-  box.style.border = "4px solid black"
+  //box.style.border = "4px solid black"
 
 
 }
