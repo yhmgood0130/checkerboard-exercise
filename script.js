@@ -17,15 +17,12 @@ for (var i = 0; i < 99; i++) {
   //box.style.justifyContent = "space-around";
   box.style.paddingBottom = "11.1%";
 
-  //Checkboard
-  if(i % 2 == 0){
-    box.style.backgroundColor = "#000";
-  }else {
-    box.style.backgroundColor = "red";
-  }
-  
+
+
   //Random Colors
-  //box.style.backgroundColor = "#" + Math.floor(Math.random()*999999);
-  //box.style.border = "4px solid black"
+  box.style.backgroundColor = "#" + Math.floor(Math.random()*999999);
+  box.style.border = "4px solid black"
+
+
 }
 //body.appendChild(box);
