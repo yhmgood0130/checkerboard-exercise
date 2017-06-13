@@ -6,6 +6,8 @@
 var body = document.getElementsByTagName("body")[0];
 
 //body.appendChild(box);
+body.style.background = "-webkit-linear-gradient(Blue,Red)";
+body.style.opacity = "0.2";
 
 for (var i = 0; i < 99; i++) {
   var box = document.createElement("div");
@@ -17,12 +19,23 @@ for (var i = 0; i < 99; i++) {
   //box.style.justifyContent = "space-around";
   box.style.paddingBottom = "11.1%";
 
-
+  //Checkboard
+  // if(i % 2 == 0){
+  //   box.style.backgroundColor = "#000";
+  // }else {
+  //   box.style.backgroundColor = "red";
+  // }
 
   //Random Colors
-  box.style.backgroundColor = "#" + Math.floor(Math.random()*999999);
+  //box.style.backgroundColor = "#" + Math.floor(Math.random()*999999);
   //box.style.border = "4px solid black"
 
+  //Gradient
+  if(i % 2 == 0){
+    box.style.backgroundColor = "black";
+  }else {
+    box.style.backgroundColor = "yellow";
+  }
 
 }
 //body.appendChild(box);
