@@ -6,11 +6,12 @@
 var body = document.getElementsByTagName("body")[0];
 
 //body.appendChild(box);
-body.style.background = "-webkit-linear-gradient(Blue,Red)";
-body.style.opacity = "0.2";
+// body.style.background = "-webkit-linear-gradient(Blue,Red)";
+// body.style.opacity = "0.2";
 
 for (var i = 0; i < 99; i++) {
   var box = document.createElement("div");
+  box.className = 'box1'
   body.appendChild(box);
   box.style.width = "11.1%";
   box.style.height = "11.1%";
@@ -31,11 +32,25 @@ for (var i = 0; i < 99; i++) {
   //box.style.border = "4px solid black"
 
   //Gradient
-  if(i % 2 == 0){
-    box.style.backgroundColor = "black";
-  }else {
-    box.style.backgroundColor = "yellow";
-  }
+  // if(i % 2 == 0){
+  //   box.style.backgroundColor = "black";
+  // }else {
+  //   box.style.backgroundColor = "yellow";
+  // }
+
+  //Every 2 seconds
+
+
 
 }
+var transition = document.getElementsByClassName("box1");
+function changeColor(){
+  window.setTimeout("changeColor()",2000);
+  for (var i = 0; i < transition.length; i++) {
+    transition[i].style.backgroundColor = '#' + Math.floor(Math.random()*999999);
+  }
+}
+
+changeColor();
+//window.setTimeout(changeColor(),200);
 //body.appendChild(box);
